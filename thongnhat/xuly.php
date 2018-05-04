@@ -1,6 +1,9 @@
 <?php
-require_once 'excel_reader2.php';
-require_once("PHPExcel.php");
+require_once '../excel_reader2.php';
+require_once("../PHPExcel.php");
+
+date_default_timezone_set('Asia/Ho_Chi_Minh');
+
 if( $_FILES['file']['tmp_name']) 
 {
     global $dulieu;
@@ -82,46 +85,51 @@ if( $_FILES['file']['tmp_name'])
     $stt = 0;
     foreach($ketqua as $k=>$v){
         $objPHPExcel->getActiveSheet()->getRowDimension($k)->setRowHeight(93);
-        
-        $objPHPExcel->getActiveSheet()->getStyle('A')->getAlignment()->setWrapText(true);
-        $objRichText = new PHPExcel_RichText();
-        $objsize1 = $objRichText->createTextRun(" ".$v[1]['tenhang']."    ".$v[1]['mahang']."\n\n     ");
-        $objsize1->getFont()->setSize(9)->setBold(true)->setName('VNI-Souvir');;
-        $objsize2 = $objRichText->createTextRun($v[1]['size']."       x      ".$v[1]['soluong']);
-        $objsize2->getFont()->setSize(14)->setBold(true)->setName('VNI-Souvir');;
-        $objPHPExcel->getActiveSheet()->setCellValue('A'.$k, $objRichText); 
-        
-        $objPHPExcel->getActiveSheet()->getStyle('B')->getAlignment()->setWrapText(true);
-        $objRichText = new PHPExcel_RichText();
-        $objsize1 = $objRichText->createTextRun(" ".$v[2]['tenhang']."    ".$v[2]['mahang']."\n\n     ");
-        $objsize1->getFont()->setSize(9)->setBold(true)->setName('VNI-Souvir');;
-        $objsize2 = $objRichText->createTextRun($v[2]['size']."       x      ".$v[2]['soluong']);
-        $objsize2->getFont()->setSize(14)->setBold(true)->setName('VNI-Souvir');;
-        $objPHPExcel->getActiveSheet()->setCellValue('B'.$k, $objRichText);
-
-        $objPHPExcel->getActiveSheet()->getStyle('C')->getAlignment()->setWrapText(true);
-        $objRichText = new PHPExcel_RichText();
-        $objsize1 = $objRichText->createTextRun(" ".$v[3]['tenhang']."    ".$v[3]['mahang']."\n\n     ");
-        $objsize1->getFont()->setSize(9)->setBold(true)->setName('VNI-Souvir');;
-        $objsize2 = $objRichText->createTextRun($v[3]['size']."       x      ".$v[3]['soluong']);
-        $objsize2->getFont()->setSize(14)->setBold(true)->setName('VNI-Souvir');;
-        $objPHPExcel->getActiveSheet()->setCellValue('C'.$k, $objRichText);
-        
-        $objPHPExcel->getActiveSheet()->getStyle('D')->getAlignment()->setWrapText(true);
-        $objRichText = new PHPExcel_RichText();
-        $objsize1 = $objRichText->createTextRun(" ".$v[4]['tenhang']."    ".$v[4]['mahang']."\n\n     ");
-        $objsize1->getFont()->setSize(9)->setBold(true)->setName('VNI-Souvir');;
-        $objsize2 = $objRichText->createTextRun($v[4]['size']."       x      ".$v[4]['soluong']);
-        $objsize2->getFont()->setSize(14)->setBold(true)->setName('VNI-Souvir');;
-        $objPHPExcel->getActiveSheet()->setCellValue('D'.$k, $objRichText);
-        
-        $objPHPExcel->getActiveSheet()->getStyle('E')->getAlignment()->setWrapText(true);
-        $objRichText = new PHPExcel_RichText();
-        $objsize1 = $objRichText->createTextRun(" ".$v[5]['tenhang']."    ".$v[5]['mahang']."\n\n     ");
-        $objsize1->getFont()->setSize(9)->setBold(true)->setName('VNI-Souvir');;
-        $objsize2 = $objRichText->createTextRun($v[5]['size']."       x      ".$v[5]['soluong']);
-        $objsize2->getFont()->setSize(14)->setBold(true)->setName('VNI-Souvir');;
-        $objPHPExcel->getActiveSheet()->setCellValue('E'.$k, $objRichText);
+        if(isset($v[1])) {
+            $objPHPExcel->getActiveSheet()->getStyle('A')->getAlignment()->setWrapText(true);
+            $objRichText = new PHPExcel_RichText();
+            $objsize1 = $objRichText->createTextRun(" ".$v[1]['tenhang']."    ".$v[1]['mahang']."\n\n     ");
+            $objsize1->getFont()->setSize(9)->setBold(true)->setName('VNI-Souvir');
+            $objsize2 = $objRichText->createTextRun($v[1]['size']."       x      ".$v[1]['soluong']);
+            $objsize2->getFont()->setSize(14)->setBold(true)->setName('VNI-Souvir');
+            $objPHPExcel->getActiveSheet()->setCellValue('A'.$k, $objRichText); 
+        }
+        if(isset($v[2])) {
+            $objPHPExcel->getActiveSheet()->getStyle('B')->getAlignment()->setWrapText(true);
+            $objRichText = new PHPExcel_RichText();
+            $objsize1 = $objRichText->createTextRun(" ".$v[2]['tenhang']."    ".$v[2]['mahang']."\n\n     ");
+            $objsize1->getFont()->setSize(9)->setBold(true)->setName('VNI-Souvir');
+            $objsize2 = $objRichText->createTextRun($v[2]['size']."       x      ".$v[2]['soluong']);
+            $objsize2->getFont()->setSize(14)->setBold(true)->setName('VNI-Souvir');
+            $objPHPExcel->getActiveSheet()->setCellValue('B'.$k, $objRichText);
+        }
+        if(isset($v[3])) {
+            $objPHPExcel->getActiveSheet()->getStyle('C')->getAlignment()->setWrapText(true);
+            $objRichText = new PHPExcel_RichText();
+            $objsize1 = $objRichText->createTextRun(" ".$v[3]['tenhang']."    ".$v[3]['mahang']."\n\n     ");
+            $objsize1->getFont()->setSize(9)->setBold(true)->setName('VNI-Souvir');
+            $objsize2 = $objRichText->createTextRun($v[3]['size']."       x      ".$v[3]['soluong']);
+            $objsize2->getFont()->setSize(14)->setBold(true)->setName('VNI-Souvir');
+            $objPHPExcel->getActiveSheet()->setCellValue('C'.$k, $objRichText);
+        }
+        if(isset($v[4])) {
+            $objPHPExcel->getActiveSheet()->getStyle('D')->getAlignment()->setWrapText(true);
+            $objRichText = new PHPExcel_RichText();
+            $objsize1 = $objRichText->createTextRun(" ".$v[4]['tenhang']."    ".$v[4]['mahang']."\n\n     ");
+            $objsize1->getFont()->setSize(9)->setBold(true)->setName('VNI-Souvir');
+            $objsize2 = $objRichText->createTextRun($v[4]['size']."       x      ".$v[4]['soluong']);
+            $objsize2->getFont()->setSize(14)->setBold(true)->setName('VNI-Souvir');
+            $objPHPExcel->getActiveSheet()->setCellValue('D'.$k, $objRichText);
+        }
+        if(isset($v[5])) {
+            $objPHPExcel->getActiveSheet()->getStyle('E')->getAlignment()->setWrapText(true);
+            $objRichText = new PHPExcel_RichText();
+            $objsize1 = $objRichText->createTextRun(" ".$v[5]['tenhang']."    ".$v[5]['mahang']."\n\n     ");
+            $objsize1->getFont()->setSize(9)->setBold(true)->setName('VNI-Souvir');
+            $objsize2 = $objRichText->createTextRun($v[5]['size']."       x      ".$v[5]['soluong']);
+            $objsize2->getFont()->setSize(14)->setBold(true)->setName('VNI-Souvir');
+            $objPHPExcel->getActiveSheet()->setCellValue('E'.$k, $objRichText);
+        }
         
     }
     // Rename sheet 
