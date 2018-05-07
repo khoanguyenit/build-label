@@ -91,7 +91,7 @@ if( $_FILES['file']['tmp_name'])
     $objPHPExcel->getActiveSheet()->getPageSetup()->setFitToWidth(1);
     $objPHPExcel->getActiveSheet()->getPageSetup()->setFitToHeight(0);
     //set width, height
-    $widthCell = 23.5;
+    $widthCell = 24;
     $objPHPExcel->getActiveSheet()->getColumnDimension('A')->setWidth($widthCell);
     $objPHPExcel->getActiveSheet()->getColumnDimension('B')->setWidth($widthCell);
     $objPHPExcel->getActiveSheet()->getColumnDimension('C')->setWidth($widthCell);
