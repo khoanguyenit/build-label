@@ -132,10 +132,10 @@ if( $_FILES['file']['tmp_name'])
 
     //export
     $stt = 0;
-    $sizeWrapLine = 12;
-    $sizeText = 13;
+    $sizeWrapLine = 10;
+    $sizeText = 12;
     foreach($ketqua as $k=>$v){
-        $objPHPExcel->getActiveSheet()->getRowDimension($k)->setRowHeight(98);
+        $objPHPExcel->getActiveSheet()->getRowDimension($k)->setRowHeight(90);
         if(isset($v[1])) {
             $objPHPExcel->getActiveSheet()->getStyle('A')->getAlignment()->setWrapText(true);
             $objRichText = new PHPExcel_RichText();
