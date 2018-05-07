@@ -147,7 +147,7 @@ if( $_FILES['file']['tmp_name'])
             $objsize2->getFont()->setSize($sizeText)->setBold(true)->setName('VNI-Souvir');
             $warpline = $objRichText->createTextRun(" \n");
             $warpline->getFont()->setSize($sizeWrapLine);
-            $objsize3 = $objRichText->createTextRun($v[1]['size']."#       x      ".$v[1]['soluong']);
+            $objsize3 = $objRichText->createTextRun($v[1]['size']."#    x    ".$v[1]['soluong']);
             $objsize3->getFont()->setSize($sizeText)->setBold(true)->setName('VNI-Souvir');
             $objPHPExcel->getActiveSheet()->setCellValue('A'.$k, $objRichText); 
         }
@@ -162,7 +162,7 @@ if( $_FILES['file']['tmp_name'])
             $objsize2->getFont()->setSize($sizeText)->setBold(true)->setName('VNI-Souvir');
             $warpline = $objRichText->createTextRun(" \n");
             $warpline->getFont()->setSize($sizeWrapLine);
-            $objsize3 = $objRichText->createTextRun($v[2]['size']."#       x      ".$v[2]['soluong']);
+            $objsize3 = $objRichText->createTextRun($v[2]['size']."#    x    ".$v[2]['soluong']);
             $objsize3->getFont()->setSize($sizeText)->setBold(true)->setName('VNI-Souvir');
             $objPHPExcel->getActiveSheet()->setCellValue('B'.$k, $objRichText);
         }
@@ -177,7 +177,7 @@ if( $_FILES['file']['tmp_name'])
             $objsize2->getFont()->setSize($sizeText)->setBold(true)->setName('VNI-Souvir');
             $warpline = $objRichText->createTextRun(" \n");
             $warpline->getFont()->setSize($sizeWrapLine);
-            $objsize3 = $objRichText->createTextRun($v[3]['size']."#       x      ".$v[3]['soluong']);
+            $objsize3 = $objRichText->createTextRun($v[3]['size']."#    x    ".$v[3]['soluong']);
             $objsize3->getFont()->setSize($sizeText)->setBold(true)->setName('VNI-Souvir');
             $objPHPExcel->getActiveSheet()->setCellValue('C'.$k, $objRichText);
         }
@@ -192,7 +192,7 @@ if( $_FILES['file']['tmp_name'])
             $objsize2->getFont()->setSize($sizeText)->setBold(true)->setName('VNI-Souvir');
             $warpline = $objRichText->createTextRun(" \n");
             $warpline->getFont()->setSize($sizeWrapLine);
-            $objsize3 = $objRichText->createTextRun($v[4]['size']."#       x      ".$v[4]['soluong']);
+            $objsize3 = $objRichText->createTextRun($v[4]['size']."#    x    ".$v[4]['soluong']);
             $objsize3->getFont()->setSize($sizeText)->setBold(true)->setName('VNI-Souvir');
             $objPHPExcel->getActiveSheet()->setCellValue('D'.$k, $objRichText);
         }
@@ -207,7 +207,7 @@ if( $_FILES['file']['tmp_name'])
             $objsize2->getFont()->setSize($sizeText)->setBold(true)->setName('VNI-Souvir');
             $warpline = $objRichText->createTextRun(" \n");
             $warpline->getFont()->setSize($sizeWrapLine);
-            $objsize3 = $objRichText->createTextRun($v[5]['size']."#       x      ".$v[5]['soluong']);
+            $objsize3 = $objRichText->createTextRun($v[5]['size']."#    x    ".$v[5]['soluong']);
             $objsize3->getFont()->setSize($sizeText)->setBold(true)->setName('VNI-Souvir');
             $objPHPExcel->getActiveSheet()->setCellValue('E'.$k, $objRichText);
         }
@@ -222,7 +222,7 @@ if( $_FILES['file']['tmp_name'])
             $objsize2->getFont()->setSize($sizeText)->setBold(true)->setName('VNI-Souvir');
             $warpline = $objRichText->createTextRun(" \n");
             $warpline->getFont()->setSize($sizeWrapLine);
-            $objsize3 = $objRichText->createTextRun($v[6]['size']."#       x      ".$v[6]['soluong']);
+            $objsize3 = $objRichText->createTextRun($v[6]['size']."#    x    ".$v[6]['soluong']);
             $objsize3->getFont()->setSize($sizeText)->setBold(true)->setName('VNI-Souvir');
             $objPHPExcel->getActiveSheet()->setCellValue('F'.$k, $objRichText);
         }
