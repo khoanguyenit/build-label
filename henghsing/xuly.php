@@ -133,97 +133,97 @@ if( $_FILES['file']['tmp_name'])
     //export
     $stt = 0;
     $sizeWrapLine = 11;
-    $sizeText = 11;
+    $sizeText = 10;
     foreach($ketqua as $k=>$v){
         $objPHPExcel->getActiveSheet()->getRowDimension($k)->setRowHeight(95);
         if(isset($v[1])) {
             $objPHPExcel->getActiveSheet()->getStyle('A')->getAlignment()->setWrapText(true);
             $objRichText = new PHPExcel_RichText();
             $objsize1 = $objRichText->createTextRun($v[1]['tenhang']."          (亨興)\n");
-            $objsize1->getFont()->setSize($sizeText)->setBold(true)->setName('VNI-Souvir');
+            $objsize1->getFont()->setSize($sizeText)->setBold(true)->setName('Calibri');
             $warpline = $objRichText->createTextRun(" \n");
             $warpline->getFont()->setSize($sizeWrapLine);
             $objsize2 = $objRichText->createTextRun($v[1]['mahang']."\n");
-            $objsize2->getFont()->setSize($sizeText)->setBold(true)->setName('VNI-Souvir');
+            $objsize2->getFont()->setSize($sizeText)->setBold(true)->setName('Calibri');
             $warpline = $objRichText->createTextRun(" \n");
             $warpline->getFont()->setSize($sizeWrapLine);
             $objsize3 = $objRichText->createTextRun($v[1]['size']."#    x    ".$v[1]['soluong']);
-            $objsize3->getFont()->setSize($sizeText)->setBold(true)->setName('VNI-Souvir');
+            $objsize3->getFont()->setSize($sizeText)->setBold(true)->setName('Calibri');
             $objPHPExcel->getActiveSheet()->setCellValue('A'.$k, $objRichText); 
         }
         if(isset($v[2])) {
             $objPHPExcel->getActiveSheet()->getStyle('B')->getAlignment()->setWrapText(true);
             $objRichText = new PHPExcel_RichText();
             $objsize1 = $objRichText->createTextRun($v[2]['tenhang']."          (亨興)\n");
-            $objsize1->getFont()->setSize($sizeText)->setBold(true)->setName('VNI-Souvir');
+            $objsize1->getFont()->setSize($sizeText)->setBold(true)->setName('Calibri');
             $warpline = $objRichText->createTextRun(" \n");
             $warpline->getFont()->setSize($sizeWrapLine);
             $objsize2 = $objRichText->createTextRun($v[2]['mahang']."\n");
-            $objsize2->getFont()->setSize($sizeText)->setBold(true)->setName('VNI-Souvir');
+            $objsize2->getFont()->setSize($sizeText)->setBold(true)->setName('Calibri');
             $warpline = $objRichText->createTextRun(" \n");
             $warpline->getFont()->setSize($sizeWrapLine);
             $objsize3 = $objRichText->createTextRun($v[2]['size']."#    x    ".$v[2]['soluong']);
-            $objsize3->getFont()->setSize($sizeText)->setBold(true)->setName('VNI-Souvir');
+            $objsize3->getFont()->setSize($sizeText)->setBold(true)->setName('Calibri');
             $objPHPExcel->getActiveSheet()->setCellValue('B'.$k, $objRichText);
         }
         if(isset($v[3])) {
             $objPHPExcel->getActiveSheet()->getStyle('C')->getAlignment()->setWrapText(true);
             $objRichText = new PHPExcel_RichText();
             $objsize1 = $objRichText->createTextRun($v[3]['tenhang']."          (亨興)\n");
-            $objsize1->getFont()->setSize($sizeText)->setBold(true)->setName('VNI-Souvir');
+            $objsize1->getFont()->setSize($sizeText)->setBold(true)->setName('Calibri');
             $warpline = $objRichText->createTextRun(" \n");
             $warpline->getFont()->setSize($sizeWrapLine);
             $objsize2 = $objRichText->createTextRun($v[3]['mahang']."\n");
-            $objsize2->getFont()->setSize($sizeText)->setBold(true)->setName('VNI-Souvir');
+            $objsize2->getFont()->setSize($sizeText)->setBold(true)->setName('Calibri');
             $warpline = $objRichText->createTextRun(" \n");
             $warpline->getFont()->setSize($sizeWrapLine);
             $objsize3 = $objRichText->createTextRun($v[3]['size']."#    x    ".$v[3]['soluong']);
-            $objsize3->getFont()->setSize($sizeText)->setBold(true)->setName('VNI-Souvir');
+            $objsize3->getFont()->setSize($sizeText)->setBold(true)->setName('Calibri');
             $objPHPExcel->getActiveSheet()->setCellValue('C'.$k, $objRichText);
         }
         if(isset($v[4])) {
             $objPHPExcel->getActiveSheet()->getStyle('D')->getAlignment()->setWrapText(true);
             $objRichText = new PHPExcel_RichText();
             $objsize1 = $objRichText->createTextRun($v[4]['tenhang']."          (亨興)\n");
-            $objsize1->getFont()->setSize($sizeText)->setBold(true)->setName('VNI-Souvir');
+            $objsize1->getFont()->setSize($sizeText)->setBold(true)->setName('Calibri');
             $warpline = $objRichText->createTextRun(" \n");
             $warpline->getFont()->setSize($sizeWrapLine);
             $objsize2 = $objRichText->createTextRun($v[4]['mahang']."\n");
-            $objsize2->getFont()->setSize($sizeText)->setBold(true)->setName('VNI-Souvir');
+            $objsize2->getFont()->setSize($sizeText)->setBold(true)->setName('Calibri');
             $warpline = $objRichText->createTextRun(" \n");
             $warpline->getFont()->setSize($sizeWrapLine);
             $objsize3 = $objRichText->createTextRun($v[4]['size']."#    x    ".$v[4]['soluong']);
-            $objsize3->getFont()->setSize($sizeText)->setBold(true)->setName('VNI-Souvir');
+            $objsize3->getFont()->setSize($sizeText)->setBold(true)->setName('Calibri');
             $objPHPExcel->getActiveSheet()->setCellValue('D'.$k, $objRichText);
         }
         if(isset($v[5])) {
             $objPHPExcel->getActiveSheet()->getStyle('E')->getAlignment()->setWrapText(true);
             $objRichText = new PHPExcel_RichText();
             $objsize1 = $objRichText->createTextRun($v[5]['tenhang']."          (亨興)\n");
-            $objsize1->getFont()->setSize($sizeText)->setBold(true)->setName('VNI-Souvir');
+            $objsize1->getFont()->setSize($sizeText)->setBold(true)->setName('Calibri');
             $warpline = $objRichText->createTextRun(" \n");
             $warpline->getFont()->setSize($sizeWrapLine);
             $objsize2 = $objRichText->createTextRun($v[5]['mahang']."\n");
-            $objsize2->getFont()->setSize($sizeText)->setBold(true)->setName('VNI-Souvir');
+            $objsize2->getFont()->setSize($sizeText)->setBold(true)->setName('Calibri');
             $warpline = $objRichText->createTextRun(" \n");
             $warpline->getFont()->setSize($sizeWrapLine);
             $objsize3 = $objRichText->createTextRun($v[5]['size']."#    x    ".$v[5]['soluong']);
-            $objsize3->getFont()->setSize($sizeText)->setBold(true)->setName('VNI-Souvir');
+            $objsize3->getFont()->setSize($sizeText)->setBold(true)->setName('Calibri');
             $objPHPExcel->getActiveSheet()->setCellValue('E'.$k, $objRichText);
         }
         if(isset($v[6])) {
             $objPHPExcel->getActiveSheet()->getStyle('F')->getAlignment()->setWrapText(true);
             $objRichText = new PHPExcel_RichText();
             $objsize1 = $objRichText->createTextRun($v[6]['tenhang']."          (亨興)\n");
-            $objsize1->getFont()->setSize($sizeText)->setBold(true)->setName('VNI-Souvir');
+            $objsize1->getFont()->setSize($sizeText)->setBold(true)->setName('Calibri');
             $warpline = $objRichText->createTextRun(" \n");
             $warpline->getFont()->setSize($sizeWrapLine);
             $objsize2 = $objRichText->createTextRun($v[6]['mahang']."\n");
-            $objsize2->getFont()->setSize($sizeText)->setBold(true)->setName('VNI-Souvir');
+            $objsize2->getFont()->setSize($sizeText)->setBold(true)->setName('Calibri');
             $warpline = $objRichText->createTextRun(" \n");
             $warpline->getFont()->setSize($sizeWrapLine);
             $objsize3 = $objRichText->createTextRun($v[6]['size']."#    x    ".$v[6]['soluong']);
-            $objsize3->getFont()->setSize($sizeText)->setBold(true)->setName('VNI-Souvir');
+            $objsize3->getFont()->setSize($sizeText)->setBold(true)->setName('Calibri');
             $objPHPExcel->getActiveSheet()->setCellValue('F'.$k, $objRichText);
         }
     }
