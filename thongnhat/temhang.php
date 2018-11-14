@@ -65,7 +65,7 @@
 </script>
 <body>
     <div id="header">
-        Phầm Mềm Xuất Tem Hàng Ver 2.0
+        Phầm Mềm Xuất Tem Hàng Thống Nhất Ver 2.0
     </div>
     <div id="hethong">
     <form enctype="multipart/form-data" action="xuly.php" method="post" onsubmit="check()">

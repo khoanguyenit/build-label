@@ -1,7 +1,7 @@
 <?php session_start();?>
 <?php if(isset($_POST['name'])) {$_SESSION['name'] = $_POST['name'];}?>
 <?php 
-	if($_SESSION['name'] != 'duchung'){
+	if($_SESSION['name'] != 'henghsing'){
 		echo "<script>alert('Dang nhap bat hop phap');</script>";
 		echo "<script>location.href='http://www.google.com.vn'</script>";
 	}
@@ -65,7 +65,7 @@
 </script>
 <body>
     <div id="header">
-        Phầm Mềm Xuất Tem Hàng Đức Hưng Ver 2.0
+        Phầm Mềm Xuất Tem Hàng Heng Hsing Ver 2.0
     </div>
     <div id="hethong">
     <form enctype="multipart/form-data" action="xuly.php" method="post" onsubmit="check()">
