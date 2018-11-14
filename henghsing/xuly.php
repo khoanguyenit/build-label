@@ -132,8 +132,8 @@ if( $_FILES['file']['tmp_name'])
 
     //export
     $stt = 0;
-    $sizeWrapLine = 10;
-    $sizeText = 12;
+    $sizeWrapLine = 11;
+    $sizeText = 11;
     foreach($ketqua as $k=>$v){
         $objPHPExcel->getActiveSheet()->getRowDimension($k)->setRowHeight(95);
         if(isset($v[1])) {
