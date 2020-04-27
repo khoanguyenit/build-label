@@ -61,6 +61,8 @@
 <script>
     function check(){
         document.getElementById('thongbao').style.display = 'block';
+        var frm = document.getElementById('form');
+        setTimeout(function(){ frm.reset(); }, 3000);
     }
 </script>
 <body>
@@ -68,7 +70,7 @@
         Phầm Mềm Xuất Tem Hàng Thống Nhất Ver 2.0
     </div>
     <div id="hethong">
-    <form enctype="multipart/form-data" action="xuly.php" method="post" onsubmit="check()">
+    <form enctype="multipart/form-data" id="form" action="xuly.php" method="post" onsubmit="check()">
         <input type="hidden" name="MAX_FILE_SIZE" value="2000000" />
         <table id="table00" width="500px">
             <tr>
