@@ -61,6 +61,7 @@
 <script>
     function check(){
         document.getElementById('thongbao').style.display = 'block';
+        setTimeout(function(){ document.getElementById('input-file').value = ""; }, 3000);
     }
 </script>
 <body>
@@ -75,7 +76,7 @@
                 <td>
                     <strong>File Excel</strong>:</td>
                 <td>
-                    <input type="file" name="file" required />
+                    <input type="file" name="file" id="input-file" required />
                 </td>
                 <td>
                     <input type="submit" value="Xử Lý" />
