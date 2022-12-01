@@ -1,7 +1,7 @@
 <?php session_start();?>
 <?php if(isset($_POST['name'])) {$_SESSION['name'] = $_POST['name'];}?>
 <?php 
-	if($_SESSION['name'] != 'duchung'){
+	if(isset($_SESSION['name']) && $_SESSION['name'] != 'duchung'){
 		echo "<script>alert('Dang nhap bat hop phap');</script>";
 		echo "<script>location.href='http://www.google.com.vn'</script>";
 	}
